@@ -11,10 +11,8 @@
 List<Integer> numeros = Arrays.asList(1, 2, 3, 4, 5);
 
 // 2 imprimir os números pares no Stream usando lambda expression e forEach
-numeros.forEach(n -> {
-	if (n % 2 == 0) {
-		sout(n);
-	}
-});
+numeros.stream()
+	.filter(n -> n % 2 == 0)
+	.forEach(System.out::println);
 ```
 
